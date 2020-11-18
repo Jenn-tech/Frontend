@@ -24,23 +24,26 @@
         p {
             margin: 0;
         }
+        /*전역변수 설정 완료*/
 
         .container {
             max-width: 270px;
             height: 140vh;
             margin: 0 auto;
         }
+        /*제일 큰 상자의 폭과, 높이, 마진값(중간정렬가능하게끔)*/
 
         .container>.logo {
             margin-top: 3rem;
             text-align: center;
             margin-bottom: 30px;
         }
+        /*로고정렬 */
 
         .form-box-field {
             margin-bottom: 10px;
-
         }
+        /*각각의 formbox 창과의 공간주기위해 marginbottom*/
 
         .form-box-field-input {
             height: 35px;
@@ -49,6 +52,7 @@
             border: 1px solid black;
             outline: none;
         }
+        /*formbox들의 높이, 폭, 들여쓰기, 보더설정*/
 
         .form-box-field-input::placeholder {
             /*가상선택자는 콜론두개*/
@@ -56,17 +60,19 @@
             font-size: 0.05rem;
             font-weight: 400;
         }
+        /*placeholder에 대한 설정, 폰트는 여기서 바꿔준다*/
 
         .form-box-field-input:focus {
             border-color: #aaaaaa;
             transition: border 0.3s ease-in-out;
-
         }
+        /*formbox가 focus됐을 때 easeinout으로 불켜주듯이 색넣어줌*/
 
         .terms-box label {
             font-size: 0.5rem;
             font-weight: 500;
         }
+        /*약관라벨의 폰트사이즈와 굵기설정*/
 
         .showterms {
             float: right;
@@ -74,10 +80,14 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        /*약관에 있는 라벨 중 약관보기의 설정(float:right로 오른쪽에 정렬해줌), 
+        위치안맞아서 margintop으로 조정해줌,
+        실제 링크가 아니기때문에 링크효과로 보일 수 있게 textdeco로 underline속성주고 cusor는 pointer로 설정*/
 
         .sign-in {
             margin-top: 35px;
         }
+        /*가입하기창과 약관부분의 공간을 주기위해 margintop설정*/
 
         .sign-in-field-input {
             width: 100%;
@@ -88,14 +98,15 @@
             background-color: black;
             border: 1px solid black;
             color: white;
-
         }
+        /*가입하기창의 폭, 높이, 폰트사이즈/굵기/색깔, 배경색과 보더색지정*/
 
         .sign-in-field-input:hover {
             background-color: white;
             cursor: pointer;
             color: black;
         }
+        /*커서올려뒀을때 색 반전시키는 기능*/
 
         .otherlogin-sign-in-field-input {
             width: 100%;
@@ -108,6 +119,7 @@
             color: white;
             margin-bottom: 10px;
         }
+        /*네이버로 로그인하는 창*/
 
         .otherlogin-sign-in-field-input2 {
             width: 100%;
@@ -120,25 +132,27 @@
             color: rgb(66, 54, 54);
             margin-bottom: 30px;
         }
+        /*카카오로 로그인하는창, otherlogin-sign-in-field-input에서 색만 바꿔줬음(비효율적이라서 다른방법모색)*/
 
         .otherlogin-sign-in-field-input:hover {
             background-color: white;
             cursor: pointer;
             color: black;
             border: 1px solid black;
-
         }
         .otherlogin-sign-in-field-input2:hover {
             background-color: white;
             cursor: pointer;
             color: black;
             border: 1px solid black;
-
         }
+        /*각각 커서올려뒀을 때 흰색으로 반전되는 기능*/
 
         .otherlogin-all{
             margin-bottom: 30px;
         }
+        /* marginbottom설정해서 밑의 태그들과 공간주기*/
+
         .otherlogin-dash1 {
             position: absolute;
             top: 210px;
@@ -149,7 +163,7 @@
         .otherlogin-dash2 {
             position: absolute;
             top: 210px;
-            right : 115px;
+            right : 165px;
             display: block;
             border-bottom: 1px solid #2f2f2f;
             width: 115px;
@@ -158,8 +172,10 @@
             font-size: 0.8rem;
             position: absolute;
             top: 200px;
-            right: 240px;
+            right: 290px;
         }
+        /*position을 absoulte로 두고 top과 right로 각각 위치설정
+        문제점 : 수동으로 조정한거라서 창의 크기를 바꾸면 달라짐(다른방법모색)*/
     </style>
 </head>
 
@@ -227,5 +243,4 @@
         </footer>
     </div>
 </body>
-
 </html>
