@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>newneek</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            background-color: #ebebeb;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 270px;
+            height: 140vh;
+            margin: 0 auto;
+        }
+
+        .container>.logo {
+            margin-top: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-box-field {
+            margin-bottom: 10px;
+
+        }
+
+        .form-box-field-input {
+            height: 35px;
+            width: 100%;
+            text-indent: 8px;
+            border: 1px solid black;
+            outline: none;
+        }
+
+        .form-box-field-input::placeholder {
+            /*가상선택자는 콜론두개*/
+            color: #b9b8b8;
+            font-size: 0.05rem;
+            font-weight: 400;
+        }
+
+        .form-box-field-input:focus {
+            border-color: #aaaaaa;
+            transition: border 0.3s ease-in-out;
+
+        }
+
+        .terms-box label {
+            font-size: 0.5rem;
+            font-weight: 500;
+        }
+
+        .showterms {
+            float: right;
+            margin-top: 6px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .sign-in {
+            margin-top: 35px;
+        }
+
+        .sign-in-field-input {
+            width: 100%;
+            height: 35px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            outline: none;
+            background-color: black;
+            border: 1px solid black;
+            color: white;
+
+        }
+
+        .sign-in-field-input:hover {
+            background-color: white;
+            cursor: pointer;
+            color: black;
+        }
+
+        .otherlogin-sign-in-field-input {
+            width: 100%;
+            height: 35px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            outline: none;
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .otherlogin-sign-in-field-input2 {
+            width: 100%;
+            height: 35px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            outline: none;
+            background-color: rgb(248, 225, 19);
+            border: 1px solid rgb(248, 225, 19);
+            color: rgb(66, 54, 54);
+            margin-bottom: 30px;
+        }
+
+        .otherlogin-sign-in-field-input:hover {
+            background-color: white;
+            cursor: pointer;
+            color: black;
+            border: 1px solid black;
+
+        }
+        .otherlogin-sign-in-field-input2:hover {
+            background-color: white;
+            cursor: pointer;
+            color: black;
+            border: 1px solid black;
+
+        }
+
+        .otherlogin-all{
+            margin-bottom: 30px;
+        }
+        .otherlogin-dash1 {
+            position: absolute;
+            top: 210px;
+            display: block;
+            border-bottom: 1px solid #2f2f2f;
+            width: 115px;
+        }
+        .otherlogin-dash2 {
+            position: absolute;
+            top: 210px;
+            right : 115px;
+            display: block;
+            border-bottom: 1px solid #2f2f2f;
+            width: 115px;
+        }
+        .otherlogin-or {
+            font-size: 0.8rem;
+            position: absolute;
+            top: 200px;
+            right: 240px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://newneek.co/static/media/logo.334be7e9.png" , width="170" />
+        </div>
+        <div class="otherlogin">
+            <div class="sign-in-field">
+                <input class="otherlogin-sign-in-field-input" type="submit" value="NAVER 로그인" />
+            </div>
+            <div class="sign-in-field">
+                <input class="otherlogin-sign-in-field-input2" type="submit" value="KAKAO 로그인" />
+            </div>
+            <div class="otherlogin-all">
+                <span class="otherlogin-dash1">
+                </span>
+                <div class="otherlogin-or">또는</div>
+                <span class="otherlogin-dash2">
+                </span>
+            </div>
+        </div>
+        <main>
+            <form class="form-box">
+                <div class="form-box-field">
+                    <input class="form-box-field-input" type="email" placeholder="이메일" />
+                </div>
+                <div class="form-box-field">
+                    <input class="form-box-field-input" type="password" placeholder="비밀번호 (8자 이상)" />
+                </div>
+                <div class="form-box-field">
+                    <input class="form-box-field-input" type="password" placeholder="비밀번호 확인 (8자 이상)" />
+                </div>
+                <div class="form-box-field">
+                    <input class="form-box-field-input" type="text" placeholder="닉네임" />
+                </div>
+                <div class="terms-box">
+                    <div>
+                        <input id="dong-eui1" type="checkbox" />
+                        <label for="dong-eui1">만 14세 이상 가입 동의 (필수)</label>
+                    </div>
+                    <div>
+                        <input id="dong-eui2" type="checkbox" />
+                        <label for="dong-eui2">뉴닉 이용약권 동의 (필수)</label>
+                        <label class="showterms">약관보기</label>
+
+                    </div>
+                    <div>
+                        <input id="dong-eui3" type="checkbox" />
+                        <label for="dong-eui3">개인정보 수집/이용동의 (필수)</label>
+                        <label class="showterms">약관보기</label>
+                    </div>
+                    <div>
+                        <input id="dong-eui4" type="checkbox" />
+                        <label for="dong-eui4">뉴스레터 및 이벤트 정보 수신동의 (선택)</label>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer class="sign-in">
+            <div class="sign-in-field">
+                <input class="sign-in-field-input" type="submit" value="가입하기" />
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
